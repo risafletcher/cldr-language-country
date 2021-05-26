@@ -2,6 +2,18 @@ const languages = require('./data/languages.json');
 const countries = require('./data/countries.json');
 const { modern: locales } = require('./data/locales.json');
 
+export function getLanguages() {
+    return JSON.parse(languages);
+}
+
+export function getCountries() {
+    return JSON.parse(countries);
+}
+
+export function getLocales() {
+    return JSON.parse(locales);
+}
+
 function generateData() {
     return locales.reduce((acc, locale) => {
         const [lc, cc] = locale.split('-');
