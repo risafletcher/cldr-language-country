@@ -1,21 +1,21 @@
-const languages = require('./data/languages.json');
-const countries = require('./data/countries.json');
-const { modern: locales } = require('./data/locales.json');
+import languages from './data/languages.json';
+import countries from './data/countries.json';
+import locales from './data/locales.json';
 
-function getLanguages() {
-    return JSON.parse(languages);
+export function getLanguages() {
+    return languages;
 }
 
-function getCountries() {
-    return JSON.parse(countries);
+export function getCountries() {
+    return countries;
 }
 
-function getLocales() {
-    return JSON.parse(locales);
+export function getLocales() {
+    return locales.modern;
 }
 
-function generateData() {
-    return locales.reduce((acc, locale) => {
+export function generateData() {
+    return locales.modern.reduce((acc, locale) => {
         const [lc, cc] = locale.split('-');
         const language = languages.find((language) => language.code === lc);
         const country = countries.find((country) => country.code === cc);
@@ -31,7 +31,7 @@ function generateData() {
 }
 
 
-function keyByCC() {
+export function keyByCC() {
     return generateData().reduce((result, datum) => {
         const cc = datum.country.code;
         if (result[cc]) {
@@ -43,7 +43,7 @@ function keyByCC() {
     }, {});
 }
 
-function keyByLC() {
+export function keyByLC() {
     return generateData().reduce((result, datum) => {
         const lc = datum.language.code;
         if (result[lc]) {
@@ -54,12 +54,3 @@ function keyByLC() {
         return result;
     }, {}); 
 }
-
-module.exports = {
-    getCountries,
-    getLanguages,
-    getLocales,
-    generateData,
-    keyByCC,
-    keyByLC,
-};
