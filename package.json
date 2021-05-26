@@ -1,6 +1,6 @@
 {
 	"name": "cldr-language-country",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "A small utility to get CLDR, country code (cc) and language code (lc) data.",
 	"main": "index.js",
 	"scripts": {
