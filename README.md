@@ -7,11 +7,11 @@ npm i cldr-language-country --save-dev
 ```
 
 ### Usage
-The API provides three main functions: `generateData()` (default), `keyByCC()`, and `keyByLC()`.
+The API provides three main functions: `generateData()`, `keyByCC()`, and `keyByLC()`.
 
-#### `generateData()` (default)
+#### `generateData()`
 ```
-import generateData from 'cldr-language-country';
+import { generateData } from 'cldr-language-country';
 
 const locales = generateData();
 ```
