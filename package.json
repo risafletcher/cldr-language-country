@@ -1,0 +1,23 @@
+{
+	"name": "cldr-language-country",
+	"version": "1.0.0",
+	"description": "A small utility to get CLDR, country code (cc) and language code (lc) data.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/risafletcher/cldr-language-country.git"
+	},
+	"author": "Risa Fletcher",
+	"license": "ISC",
+	"keywords": [
+		"cldr",
+		"cc",
+		"lc",
+		"localization",
+		"country codes",
+		"language codes"
+	]
+}
