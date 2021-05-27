@@ -14,7 +14,7 @@ exports.getLocales = function() {
     return locales.modern;
 }
 
-exports.generateData = function() {
+function generateData() {
     return locales.modern.reduce((acc, locale) => {
         const [lc, cc] = locale.split('-');
         const language = languages.find((language) => language.code === lc);
@@ -30,6 +30,7 @@ exports.generateData = function() {
     }, []);
 }
 
+exports.generateData = generateData;
 
 exports.keyByCC = function() {
     return generateData().reduce((result, datum) => {
