@@ -14,7 +14,7 @@ exports.getLocales = function() {
     return locales.modern;
 }
 
-function generateData() {
+exports.generateData = function() {
     return locales.modern.reduce((acc, locale) => {
         const [lc, cc] = locale.split('-');
         const language = languages.find((language) => language.code === lc);
@@ -30,10 +30,8 @@ function generateData() {
     }, []);
 }
 
-exports.generateData = generateData;
-
 exports.keyByCC = function() {
-    return generateData().reduce((result, datum) => {
+    return exports.generateData().reduce((result, datum) => {
         const cc = datum.country.code;
         if (result[cc]) {
             result[cc].push(datum);
@@ -45,7 +43,7 @@ exports.keyByCC = function() {
 }
 
 exports.keyByLC = function() {
-    return generateData().reduce((result, datum) => {
+    return exports.generateData().reduce((result, datum) => {
         const lc = datum.language.code;
         if (result[lc]) {
             result[lc].push(datum);
