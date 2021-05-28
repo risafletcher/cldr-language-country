@@ -53,3 +53,51 @@ exports.keyByLC = function() {
         return result;
     }, {}); 
 }
+
+exports.getByCC = function(cc) {
+    if (!cc) {
+        return new Error('A country code is required.');
+    }
+    return exports.generateData().filter(({ country }) => country.code === cc.toUpperCase());
+}
+
+exports.getByLC = function(lc) {
+    if (!lc) {
+        return new Error('A language code is required.');
+    }
+    return exports.generateData().filter(({ language }) => language.code === lc.toLowerCase());
+}
+
+exports.getByCountryName = function(name) {
+    if (!name) {
+        return new Error('A country name is required.');
+    }
+    return exports.generateData().filter(({ country }) => country.name.toUpperCase() === name.toUpperCase());
+}
+
+exports.getByLanguageName = function(name) {
+    if (!name) {
+        return new Error('A language name is required');
+    }
+    return exports.generateData().filter(({ language }) => {
+        const uppercaseLanguageName = language.name.toUpperCase();
+        return uppercaseLanguageName === name.toUpperCase() ||
+            uppercaseLanguageName.includes(name.toUpperCase());
+    });
+}
+
+exports.getByLocale = function(locale) {
+    if (!locale || typeof locale !== 'string') {
+        return new Error('A locale code (String) is required.');
+    }
+    return exports.generateData().filter((datum) => datum.locale.toUpperCase() === locale.toUpperCase());
+}
+
+exports.getByNativeName = function(name) {
+    if (!name) {
+        return new Error('A name is required.');
+    }
+    return exports.generateData().filter(({ language: { native } }) =>
+        native === name || native.toUpperCase() === name.toUpperCase());
+}
+
