@@ -3,7 +3,7 @@ Tiny util that maps 2-character language codes (lc) and country codes (cc) to CL
 
 ### Install
 ```
-npm i cldr-language-country --save-dev
+npm i cldr-language-country
 ```
 
 ### Usage
