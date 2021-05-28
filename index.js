@@ -11,7 +11,7 @@ exports.getCountries = function() {
 }
 
 exports.getLocales = function() {
-    return locales.modern;
+    return locales;
 }
 
 exports.generateData = function() {
