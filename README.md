@@ -10,13 +10,13 @@ npm i cldr-language-country
 The API provides three main functions: `generateData()`, `keyByCC()`, and `keyByLC()`.
 
 #### `generateData()`
-```
+```javascript
 import { generateData } from 'cldr-language-country';
 
 const locales = generateData();
 ```
 Result:
-```
+```javascript
 [
     {
         language: {
@@ -34,13 +34,13 @@ Result:
 ```
 
 #### `keyByCC()`
-```
+```javascript
 import { keyByCC } from 'cldr-language-country';
 
 const locales = keyByCC();
 ```
 Result:
-```
+```javascript
 {
     'CA': [
         {
@@ -73,13 +73,13 @@ Result:
 
 
 #### `keyByLC()`
-```
+```javascript
 import { keyByLC } from 'cldr-language-country';
 
 const locales = keyByLC();
 ```
 Result:
-```
+```javascript
 {
     'en': [
         {
