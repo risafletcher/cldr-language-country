@@ -16,12 +16,12 @@ npm i cldr-language-country
 | [getLanguages](#getLanguages)     | _none_         | Array of all language data, with `name`, `native`, and `code`  |
 | [keyByCC](#keyByCC)          | _none_         | Object containing all data, keyed by country `code`            |
 | [keyByLC](#keyByLC)          | _none_         | Object containing all data, keyed by language `code`           |
-| [getByCC](#getByCC(cc))          | cc(String)     | Array of all data whose `country.code` matches `cc`.           |
-| [getByLC](#getByLC(lc))          | lc(String)     | Array of all data whose `language.code` matches `lc`.          |
-| [getByCountryName](#getByCountryName(name)) | name(string)   | Array of all data whose `country.name` matches `name`.         |
-| [getByLanguage](#getByLanguage(name))    | name(String)   | Array of all data whose `language.name` matches `name`.        |
-| [getByLocale](#getByLocale(locale))      | locale(String) | Array of all data whose `locale` matches the provided `locale` |
-| [getByNativeName](#getByNativeName(name))  | name(String)   | Array of all data whose `language.name` matches `name`.        |
+| [getByCC](#getbycccc)          | cc(String)     | Array of all data whose `country.code` matches `cc`.           |
+| [getByLC](#getbylclc)          | lc(String)     | Array of all data whose `language.code` matches `lc`.          |
+| [getByCountryName](#getbycountryname) | name(string)   | Array of all data whose `country.name` matches `name`.         |
+| [getByLanguage](#getbylanguagename)    | name(String)   | Array of all data whose `language.name` matches `name`.        |
+| [getByLocale](#getbylocalelocale)      | locale(String) | Array of all data whose `locale` matches the provided `locale` |
+| [getByNativeName](#getbynativenamename)  | name(String)   | Array of all data whose `language.name` matches `name`.        |
 
 
 ### `generateData()`
